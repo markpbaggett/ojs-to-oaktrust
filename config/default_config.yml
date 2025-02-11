@@ -1,0 +1,6 @@
+journal_title:
+  url: https://{title}-tamu.tdl.org/{title}
+  token: "api-key"
+  oai_endpoint: https://{title}-tamu.tdl.org/{title}/oai
+  output_directory: "output"
+  title: "Journal Title"

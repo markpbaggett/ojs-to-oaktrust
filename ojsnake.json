@@ -1,0 +1,1484 @@
+{
+    "_href": "https://ciney-ojs-tamu.tdl.org/ciney/api/v1/issues/9",
+    "accessStatus": 1,
+    "articles": [
+        {
+            "_href": "https://ciney-ojs-tamu.tdl.org/ciney/api/v1/submissions/109",
+            "contextId": 1,
+            "currentPublicationId": 109,
+            "datacite::registeredDoi": null,
+            "datacite::status": null,
+            "dateLastActivity": "2017-06-14 08:53:03",
+            "dateSubmitted": "2017-06-14 08:47:05",
+            "id": 109,
+            "lastModified": "2017-06-14 08:53:03",
+            "locale": "en",
+            "publications": [
+                {
+                    "_href": "https://ciney-ojs-tamu.tdl.org/ciney/api/v1/submissions/109/publications/109",
+                    "authorsString": "Richard K. Curry",
+                    "authorsStringIncludeInBrowse": "Richard K. Curry",
+                    "authorsStringShort": "Curry",
+                    "categoryIds": [],
+                    "coverImage": {
+                        "en": null
+                    },
+                    "datacite::registeredDoi": null,
+                    "datacite::status": null,
+                    "datePublished": "2017-06-14",
+                    "doiObject": null,
+                    "fullTitle": {
+                        "en": "REVIEW OF HUMOR IN LATIN AMERICAN CINEMA by JUAN POBLETE & JUANA SU\u00c1REZ, EDS."
+                    },
+                    "galleys": [
+                        {
+                            "datacite::registeredDoi": null,
+                            "datacite::status": null,
+                            "doiObject": null,
+                            "file": {
+                                "_href": "https://ciney-ojs-tamu.tdl.org/ciney/api/v1/submissions/109/files/219",
+                                "assocId": 112,
+                                "assocType": 521,
+                                "caption": null,
+                                "copyrightOwner": null,
+                                "createdAt": "2017-06-14 08:47:05",
+                                "creator": {
+                                    "en": ""
+                                },
+                                "credit": null,
+                                "datacite::registeredDoi": null,
+                                "datacite::status": null,
+                                "dateCreated": null,
+                                "dependentFiles": [],
+                                "description": {
+                                    "en": ""
+                                },
+                                "documentType": "pdf",
+                                "fileId": 213,
+                                "fileStage": 10,
+                                "genreId": 1,
+                                "genreIsDependent": false,
+                                "genreIsSupplementary": false,
+                                "genreName": {
+                                    "en": "Article Text"
+                                },
+                                "id": 219,
+                                "language": null,
+                                "locale": "en",
+                                "mimetype": "application/pdf",
+                                "name": {
+                                    "en": "ojsadmin, 9 Res 1.pdf"
+                                },
+                                "path": "journals/1/articles/109/submission/proof/109-1-219-1-10-20170614.pdf",
+                                "publisher": {
+                                    "en": ""
+                                },
+                                "revisions": [],
+                                "source": {
+                                    "en": ""
+                                },
+                                "sourceSubmissionFileId": null,
+                                "sponsor": {
+                                    "en": ""
+                                },
+                                "subject": {
+                                    "en": ""
+                                },
+                                "submissionId": 109,
+                                "terms": null,
+                                "updatedAt": "2017-06-14 08:47:05",
+                                "uploaderUserId": 1,
+                                "uploaderUserName": "ojsadmin",
+                                "url": "https://ciney-ojs-tamu.tdl.org/ciney/$$$call$$$/api/file/file-api/download-file?submissionFileId=219&submissionId=109&stageId=5",
+                                "viewable": false
+                            },
+                            "id": 112,
+                            "isApproved": true,
+                            "label": "PDF",
+                            "locale": "en",
+                            "pub-id::publisher-id": null,
+                            "publicationId": 109,
+                            "seq": 0,
+                            "submissionFileId": 219,
+                            "urlPublished": "https://ciney-ojs-tamu.tdl.org/ciney/article/view/109/version/109/112",
+                            "urlRemote": null
+                        }
+                    ],
+                    "id": 109,
+                    "locale": "en",
+                    "pages": "",
+                    "prefix": {
+                        "en": ""
+                    },
+                    "primaryContactId": 116,
+                    "pub-id::publisher-id": null,
+                    "sectionId": 4,
+                    "status": 3,
+                    "submissionId": 109,
+                    "subtitle": {
+                        "en": ""
+                    },
+                    "title": {
+                        "en": "REVIEW OF HUMOR IN LATIN AMERICAN CINEMA by JUAN POBLETE & JUANA SU\u00c1REZ, EDS."
+                    },
+                    "urlPublished": "https://ciney-ojs-tamu.tdl.org/ciney/article/view/109/version/109",
+                    "version": 1
+                }
+            ],
+            "stageId": 4,
+            "status": 3,
+            "statusLabel": "Published",
+            "submissionProgress": "",
+            "urlAuthorWorkflow": "https://ciney-ojs-tamu.tdl.org/ciney/authorDashboard/submission/109",
+            "urlEditorialWorkflow": "https://ciney-ojs-tamu.tdl.org/ciney/workflow/access/109",
+            "urlPublished": "https://ciney-ojs-tamu.tdl.org/ciney/article/view/109",
+            "urlSubmissionWizard": "https://ciney-ojs-tamu.tdl.org/ciney/submission?id=109",
+            "urlWorkflow": "https://ciney-ojs-tamu.tdl.org/ciney/workflow/access/109"
+        },
+        {
+            "_href": "https://ciney-ojs-tamu.tdl.org/ciney/api/v1/submissions/108",
+            "contextId": 1,
+            "currentPublicationId": 108,
+            "datacite::registeredDoi": null,
+            "datacite::status": null,
+            "dateLastActivity": "2017-06-14 08:53:03",
+            "dateSubmitted": "2017-06-14 08:44:09",
+            "id": 108,
+            "lastModified": "2017-06-14 08:53:03",
+            "locale": "en",
+            "publications": [
+                {
+                    "_href": "https://ciney-ojs-tamu.tdl.org/ciney/api/v1/submissions/108/publications/108",
+                    "authorsString": "Mar\u00eda Gil Poisa",
+                    "authorsStringIncludeInBrowse": "Mar\u00eda Gil Poisa",
+                    "authorsStringShort": "Gil Poisa",
+                    "categoryIds": [],
+                    "coverImage": {
+                        "en": null
+                    },
+                    "datacite::registeredDoi": null,
+                    "datacite::status": null,
+                    "datePublished": "2017-06-14",
+                    "doiObject": null,
+                    "fullTitle": {
+                        "en": "ENTREVISTA A DANI DE LA TORRE SIG\u00dcEIRO"
+                    },
+                    "galleys": [
+                        {
+                            "datacite::registeredDoi": null,
+                            "datacite::status": null,
+                            "doiObject": null,
+                            "file": {
+                                "_href": "https://ciney-ojs-tamu.tdl.org/ciney/api/v1/submissions/108/files/217",
+                                "assocId": 111,
+                                "assocType": 521,
+                                "caption": null,
+                                "copyrightOwner": null,
+                                "createdAt": "2017-06-14 08:44:09",
+                                "creator": {
+                                    "en": ""
+                                },
+                                "credit": null,
+                                "datacite::registeredDoi": null,
+                                "datacite::status": null,
+                                "dateCreated": null,
+                                "dependentFiles": [],
+                                "description": {
+                                    "en": ""
+                                },
+                                "documentType": "pdf",
+                                "fileId": 211,
+                                "fileStage": 10,
+                                "genreId": 1,
+                                "genreIsDependent": false,
+                                "genreIsSupplementary": false,
+                                "genreName": {
+                                    "en": "Article Text"
+                                },
+                                "id": 217,
+                                "language": null,
+                                "locale": "en",
+                                "mimetype": "application/pdf",
+                                "name": {
+                                    "en": "ojsadmin, 8 entrevista a dani de la torre.pdf"
+                                },
+                                "path": "journals/1/articles/108/submission/proof/108-1-217-1-10-20170614.pdf",
+                                "publisher": {
+                                    "en": ""
+                                },
+                                "revisions": [],
+                                "source": {
+                                    "en": ""
+                                },
+                                "sourceSubmissionFileId": null,
+                                "sponsor": {
+                                    "en": ""
+                                },
+                                "subject": {
+                                    "en": ""
+                                },
+                                "submissionId": 108,
+                                "terms": null,
+                                "updatedAt": "2017-06-14 08:44:09",
+                                "uploaderUserId": 1,
+                                "uploaderUserName": "ojsadmin",
+                                "url": "https://ciney-ojs-tamu.tdl.org/ciney/$$$call$$$/api/file/file-api/download-file?submissionFileId=217&submissionId=108&stageId=5",
+                                "viewable": false
+                            },
+                            "id": 111,
+                            "isApproved": true,
+                            "label": "PDF",
+                            "locale": "en",
+                            "pub-id::publisher-id": null,
+                            "publicationId": 108,
+                            "seq": 0,
+                            "submissionFileId": 217,
+                            "urlPublished": "https://ciney-ojs-tamu.tdl.org/ciney/article/view/108/version/108/111",
+                            "urlRemote": null
+                        }
+                    ],
+                    "id": 108,
+                    "locale": "en",
+                    "pages": "",
+                    "prefix": {
+                        "en": ""
+                    },
+                    "primaryContactId": 115,
+                    "pub-id::publisher-id": null,
+                    "sectionId": 3,
+                    "status": 3,
+                    "submissionId": 108,
+                    "subtitle": {
+                        "en": ""
+                    },
+                    "title": {
+                        "en": "ENTREVISTA A DANI DE LA TORRE SIG\u00dcEIRO"
+                    },
+                    "urlPublished": "https://ciney-ojs-tamu.tdl.org/ciney/article/view/108/version/108",
+                    "version": 1
+                }
+            ],
+            "stageId": 4,
+            "status": 3,
+            "statusLabel": "Published",
+            "submissionProgress": "",
+            "urlAuthorWorkflow": "https://ciney-ojs-tamu.tdl.org/ciney/authorDashboard/submission/108",
+            "urlEditorialWorkflow": "https://ciney-ojs-tamu.tdl.org/ciney/workflow/access/108",
+            "urlPublished": "https://ciney-ojs-tamu.tdl.org/ciney/article/view/108",
+            "urlSubmissionWizard": "https://ciney-ojs-tamu.tdl.org/ciney/submission?id=108",
+            "urlWorkflow": "https://ciney-ojs-tamu.tdl.org/ciney/workflow/access/108"
+        },
+        {
+            "_href": "https://ciney-ojs-tamu.tdl.org/ciney/api/v1/submissions/107",
+            "contextId": 1,
+            "currentPublicationId": 107,
+            "datacite::registeredDoi": null,
+            "datacite::status": null,
+            "dateLastActivity": "2017-06-14 08:53:03",
+            "dateSubmitted": "2017-06-14 08:42:03",
+            "id": 107,
+            "lastModified": "2017-06-14 08:53:03",
+            "locale": "en",
+            "publications": [
+                {
+                    "_href": "https://ciney-ojs-tamu.tdl.org/ciney/api/v1/submissions/107/publications/107",
+                    "authorsString": "Maribel Rams Albuisech",
+                    "authorsStringIncludeInBrowse": "Maribel Rams Albuisech",
+                    "authorsStringShort": "Rams Albuisech",
+                    "categoryIds": [],
+                    "coverImage": {
+                        "en": null
+                    },
+                    "datacite::registeredDoi": null,
+                    "datacite::status": null,
+                    "datePublished": "2017-06-14",
+                    "doiObject": null,
+                    "fullTitle": {
+                        "en": "ENTREVISTA A VENTURA PONS"
+                    },
+                    "galleys": [
+                        {
+                            "datacite::registeredDoi": null,
+                            "datacite::status": null,
+                            "doiObject": null,
+                            "file": {
+                                "_href": "https://ciney-ojs-tamu.tdl.org/ciney/api/v1/submissions/107/files/215",
+                                "assocId": 110,
+                                "assocType": 521,
+                                "caption": null,
+                                "copyrightOwner": null,
+                                "createdAt": "2017-06-14 08:42:03",
+                                "creator": {
+                                    "en": ""
+                                },
+                                "credit": null,
+                                "datacite::registeredDoi": null,
+                                "datacite::status": null,
+                                "dateCreated": null,
+                                "dependentFiles": [],
+                                "description": {
+                                    "en": ""
+                                },
+                                "documentType": "pdf",
+                                "fileId": 209,
+                                "fileStage": 10,
+                                "genreId": 1,
+                                "genreIsDependent": false,
+                                "genreIsSupplementary": false,
+                                "genreName": {
+                                    "en": "Article Text"
+                                },
+                                "id": 215,
+                                "language": null,
+                                "locale": "en",
+                                "mimetype": "application/pdf",
+                                "name": {
+                                    "en": "ojsadmin, 7 Entrevista V Pons.pdf"
+                                },
+                                "path": "journals/1/articles/107/submission/proof/107-1-215-1-10-20170614.pdf",
+                                "publisher": {
+                                    "en": ""
+                                },
+                                "revisions": [],
+                                "source": {
+                                    "en": ""
+                                },
+                                "sourceSubmissionFileId": null,
+                                "sponsor": {
+                                    "en": ""
+                                },
+                                "subject": {
+                                    "en": ""
+                                },
+                                "submissionId": 107,
+                                "terms": null,
+                                "updatedAt": "2017-06-14 08:42:03",
+                                "uploaderUserId": 1,
+                                "uploaderUserName": "ojsadmin",
+                                "url": "https://ciney-ojs-tamu.tdl.org/ciney/$$$call$$$/api/file/file-api/download-file?submissionFileId=215&submissionId=107&stageId=5",
+                                "viewable": false
+                            },
+                            "id": 110,
+                            "isApproved": true,
+                            "label": "PDF",
+                            "locale": "en",
+                            "pub-id::publisher-id": null,
+                            "publicationId": 107,
+                            "seq": 0,
+                            "submissionFileId": 215,
+                            "urlPublished": "https://ciney-ojs-tamu.tdl.org/ciney/article/view/107/version/107/110",
+                            "urlRemote": null
+                        }
+                    ],
+                    "id": 107,
+                    "locale": "en",
+                    "pages": "",
+                    "prefix": {
+                        "en": ""
+                    },
+                    "primaryContactId": 114,
+                    "pub-id::publisher-id": null,
+                    "sectionId": 3,
+                    "status": 3,
+                    "submissionId": 107,
+                    "subtitle": {
+                        "en": ""
+                    },
+                    "title": {
+                        "en": "ENTREVISTA A VENTURA PONS"
+                    },
+                    "urlPublished": "https://ciney-ojs-tamu.tdl.org/ciney/article/view/107/version/107",
+                    "version": 1
+                }
+            ],
+            "stageId": 4,
+            "status": 3,
+            "statusLabel": "Published",
+            "submissionProgress": "",
+            "urlAuthorWorkflow": "https://ciney-ojs-tamu.tdl.org/ciney/authorDashboard/submission/107",
+            "urlEditorialWorkflow": "https://ciney-ojs-tamu.tdl.org/ciney/workflow/access/107",
+            "urlPublished": "https://ciney-ojs-tamu.tdl.org/ciney/article/view/107",
+            "urlSubmissionWizard": "https://ciney-ojs-tamu.tdl.org/ciney/submission?id=107",
+            "urlWorkflow": "https://ciney-ojs-tamu.tdl.org/ciney/workflow/access/107"
+        },
+        {
+            "_href": "https://ciney-ojs-tamu.tdl.org/ciney/api/v1/submissions/106",
+            "contextId": 1,
+            "currentPublicationId": 106,
+            "datacite::registeredDoi": null,
+            "datacite::status": null,
+            "dateLastActivity": "2017-06-14 08:53:03",
+            "dateSubmitted": "2017-06-14 08:39:50",
+            "id": 106,
+            "lastModified": "2017-06-14 08:53:03",
+            "locale": "en",
+            "publications": [
+                {
+                    "_href": "https://ciney-ojs-tamu.tdl.org/ciney/api/v1/submissions/106/publications/106",
+                    "authorsString": "Graciela Tissera",
+                    "authorsStringIncludeInBrowse": "Graciela Tissera",
+                    "authorsStringShort": "Tissera",
+                    "categoryIds": [],
+                    "coverImage": {
+                        "en": null
+                    },
+                    "datacite::registeredDoi": null,
+                    "datacite::status": null,
+                    "datePublished": "2017-06-14",
+                    "doiObject": null,
+                    "fullTitle": {
+                        "en": "INTERPRETACIONES F\u00cdLMICAS DE LAS TEOR\u00cdAS DEL CONOCIMIENTO EN LAS FICCIONES DE BORGES Y CORT\u00c1ZAR"
+                    },
+                    "galleys": [
+                        {
+                            "datacite::registeredDoi": null,
+                            "datacite::status": null,
+                            "doiObject": null,
+                            "file": {
+                                "_href": "https://ciney-ojs-tamu.tdl.org/ciney/api/v1/submissions/106/files/213",
+                                "assocId": 109,
+                                "assocType": 521,
+                                "caption": null,
+                                "copyrightOwner": null,
+                                "createdAt": "2017-06-14 08:39:50",
+                                "creator": {
+                                    "en": ""
+                                },
+                                "credit": null,
+                                "datacite::registeredDoi": null,
+                                "datacite::status": null,
+                                "dateCreated": null,
+                                "dependentFiles": [],
+                                "description": {
+                                    "en": ""
+                                },
+                                "documentType": "pdf",
+                                "fileId": 207,
+                                "fileStage": 10,
+                                "genreId": 1,
+                                "genreIsDependent": false,
+                                "genreIsSupplementary": false,
+                                "genreName": {
+                                    "en": "Article Text"
+                                },
+                                "id": 213,
+                                "language": null,
+                                "locale": "en",
+                                "mimetype": "application/pdf",
+                                "name": {
+                                    "en": "ojsadmin, 5 g tissera.pdf"
+                                },
+                                "path": "journals/1/articles/106/submission/proof/106-1-213-1-10-20170614.pdf",
+                                "publisher": {
+                                    "en": ""
+                                },
+                                "revisions": [],
+                                "source": {
+                                    "en": ""
+                                },
+                                "sourceSubmissionFileId": null,
+                                "sponsor": {
+                                    "en": ""
+                                },
+                                "subject": {
+                                    "en": ""
+                                },
+                                "submissionId": 106,
+                                "terms": null,
+                                "updatedAt": "2017-06-14 08:39:50",
+                                "uploaderUserId": 1,
+                                "uploaderUserName": "ojsadmin",
+                                "url": "https://ciney-ojs-tamu.tdl.org/ciney/$$$call$$$/api/file/file-api/download-file?submissionFileId=213&submissionId=106&stageId=5",
+                                "viewable": false
+                            },
+                            "id": 109,
+                            "isApproved": true,
+                            "label": "PDF",
+                            "locale": "en",
+                            "pub-id::publisher-id": null,
+                            "publicationId": 106,
+                            "seq": 0,
+                            "submissionFileId": 213,
+                            "urlPublished": "https://ciney-ojs-tamu.tdl.org/ciney/article/view/106/version/106/109",
+                            "urlRemote": null
+                        }
+                    ],
+                    "id": 106,
+                    "locale": "en",
+                    "pages": "",
+                    "prefix": {
+                        "en": ""
+                    },
+                    "primaryContactId": 113,
+                    "pub-id::publisher-id": null,
+                    "sectionId": 1,
+                    "status": 3,
+                    "submissionId": 106,
+                    "subtitle": {
+                        "en": ""
+                    },
+                    "title": {
+                        "en": "INTERPRETACIONES F\u00cdLMICAS DE LAS TEOR\u00cdAS DEL CONOCIMIENTO EN LAS FICCIONES DE BORGES Y CORT\u00c1ZAR"
+                    },
+                    "urlPublished": "https://ciney-ojs-tamu.tdl.org/ciney/article/view/106/version/106",
+                    "version": 1
+                }
+            ],
+            "stageId": 4,
+            "status": 3,
+            "statusLabel": "Published",
+            "submissionProgress": "",
+            "urlAuthorWorkflow": "https://ciney-ojs-tamu.tdl.org/ciney/authorDashboard/submission/106",
+            "urlEditorialWorkflow": "https://ciney-ojs-tamu.tdl.org/ciney/workflow/access/106",
+            "urlPublished": "https://ciney-ojs-tamu.tdl.org/ciney/article/view/106",
+            "urlSubmissionWizard": "https://ciney-ojs-tamu.tdl.org/ciney/submission?id=106",
+            "urlWorkflow": "https://ciney-ojs-tamu.tdl.org/ciney/workflow/access/106"
+        },
+        {
+            "_href": "https://ciney-ojs-tamu.tdl.org/ciney/api/v1/submissions/105",
+            "contextId": 1,
+            "currentPublicationId": 105,
+            "datacite::registeredDoi": null,
+            "datacite::status": null,
+            "dateLastActivity": "2017-06-14 08:53:03",
+            "dateSubmitted": "2017-06-14 08:37:59",
+            "id": 105,
+            "lastModified": "2017-06-14 08:53:03",
+            "locale": "en",
+            "publications": [
+                {
+                    "_href": "https://ciney-ojs-tamu.tdl.org/ciney/api/v1/submissions/105/publications/105",
+                    "authorsString": "Elena Gasc\u00f3n-Vera",
+                    "authorsStringIncludeInBrowse": "Elena Gasc\u00f3n-Vera",
+                    "authorsStringShort": "Gasc\u00f3n-Vera",
+                    "categoryIds": [],
+                    "coverImage": {
+                        "en": null
+                    },
+                    "datacite::registeredDoi": null,
+                    "datacite::status": null,
+                    "datePublished": "2017-06-14",
+                    "doiObject": null,
+                    "fullTitle": {
+                        "en": "LA MUJER DESENCIALIALIZADA EN LA PIEL QUE HABITO (2011) DE PEDRO ALMOD\u00d3VAR"
+                    },
+                    "galleys": [
+                        {
+                            "datacite::registeredDoi": null,
+                            "datacite::status": null,
+                            "doiObject": null,
+                            "file": {
+                                "_href": "https://ciney-ojs-tamu.tdl.org/ciney/api/v1/submissions/105/files/211",
+                                "assocId": 108,
+                                "assocType": 521,
+                                "caption": null,
+                                "copyrightOwner": null,
+                                "createdAt": "2017-06-14 08:37:59",
+                                "creator": {
+                                    "en": ""
+                                },
+                                "credit": null,
+                                "datacite::registeredDoi": null,
+                                "datacite::status": null,
+                                "dateCreated": null,
+                                "dependentFiles": [],
+                                "description": {
+                                    "en": ""
+                                },
+                                "documentType": "pdf",
+                                "fileId": 205,
+                                "fileStage": 10,
+                                "genreId": 1,
+                                "genreIsDependent": false,
+                                "genreIsSupplementary": false,
+                                "genreName": {
+                                    "en": "Article Text"
+                                },
+                                "id": 211,
+                                "language": null,
+                                "locale": "en",
+                                "mimetype": "application/pdf",
+                                "name": {
+                                    "en": "ojsadmin, 4 Almodovar.pdf"
+                                },
+                                "path": "journals/1/articles/105/submission/proof/105-1-211-1-10-20170614.pdf",
+                                "publisher": {
+                                    "en": ""
+                                },
+                                "revisions": [],
+                                "source": {
+                                    "en": ""
+                                },
+                                "sourceSubmissionFileId": null,
+                                "sponsor": {
+                                    "en": ""
+                                },
+                                "subject": {
+                                    "en": ""
+                                },
+                                "submissionId": 105,
+                                "terms": null,
+                                "updatedAt": "2017-06-14 08:37:59",
+                                "uploaderUserId": 1,
+                                "uploaderUserName": "ojsadmin",
+                                "url": "https://ciney-ojs-tamu.tdl.org/ciney/$$$call$$$/api/file/file-api/download-file?submissionFileId=211&submissionId=105&stageId=5",
+                                "viewable": false
+                            },
+                            "id": 108,
+                            "isApproved": true,
+                            "label": "PDF",
+                            "locale": "en",
+                            "pub-id::publisher-id": null,
+                            "publicationId": 105,
+                            "seq": 0,
+                            "submissionFileId": 211,
+                            "urlPublished": "https://ciney-ojs-tamu.tdl.org/ciney/article/view/105/version/105/108",
+                            "urlRemote": null
+                        }
+                    ],
+                    "id": 105,
+                    "locale": "en",
+                    "pages": "",
+                    "prefix": {
+                        "en": ""
+                    },
+                    "primaryContactId": 112,
+                    "pub-id::publisher-id": null,
+                    "sectionId": 1,
+                    "status": 3,
+                    "submissionId": 105,
+                    "subtitle": {
+                        "en": ""
+                    },
+                    "title": {
+                        "en": "LA MUJER DESENCIALIALIZADA EN LA PIEL QUE HABITO (2011) DE PEDRO ALMOD\u00d3VAR"
+                    },
+                    "urlPublished": "https://ciney-ojs-tamu.tdl.org/ciney/article/view/105/version/105",
+                    "version": 1
+                }
+            ],
+            "stageId": 4,
+            "status": 3,
+            "statusLabel": "Published",
+            "submissionProgress": "",
+            "urlAuthorWorkflow": "https://ciney-ojs-tamu.tdl.org/ciney/authorDashboard/submission/105",
+            "urlEditorialWorkflow": "https://ciney-ojs-tamu.tdl.org/ciney/workflow/access/105",
+            "urlPublished": "https://ciney-ojs-tamu.tdl.org/ciney/article/view/105",
+            "urlSubmissionWizard": "https://ciney-ojs-tamu.tdl.org/ciney/submission?id=105",
+            "urlWorkflow": "https://ciney-ojs-tamu.tdl.org/ciney/workflow/access/105"
+        },
+        {
+            "_href": "https://ciney-ojs-tamu.tdl.org/ciney/api/v1/submissions/104",
+            "contextId": 1,
+            "currentPublicationId": 104,
+            "datacite::registeredDoi": null,
+            "datacite::status": null,
+            "dateLastActivity": "2017-06-14 08:53:03",
+            "dateSubmitted": "2017-06-14 08:35:41",
+            "id": 104,
+            "lastModified": "2017-06-14 08:53:03",
+            "locale": "en",
+            "publications": [
+                {
+                    "_href": "https://ciney-ojs-tamu.tdl.org/ciney/api/v1/submissions/104/publications/104",
+                    "authorsString": "Richard K. Curry",
+                    "authorsStringIncludeInBrowse": "Richard K. Curry",
+                    "authorsStringShort": "Curry",
+                    "categoryIds": [],
+                    "coverImage": {
+                        "en": null
+                    },
+                    "datacite::registeredDoi": null,
+                    "datacite::status": null,
+                    "datePublished": "2017-06-14",
+                    "doiObject": null,
+                    "fullTitle": {
+                        "en": "EL DIRECTOR COMO FIL\u00d3SOFO-POETA: PATRICIO GUZM\u00c1N EN NOSTALIGIA DE LA LUZ"
+                    },
+                    "galleys": [
+                        {
+                            "datacite::registeredDoi": null,
+                            "datacite::status": null,
+                            "doiObject": null,
+                            "file": {
+                                "_href": "https://ciney-ojs-tamu.tdl.org/ciney/api/v1/submissions/104/files/209",
+                                "assocId": 107,
+                                "assocType": 521,
+                                "caption": null,
+                                "copyrightOwner": null,
+                                "createdAt": "2017-06-14 08:35:41",
+                                "creator": {
+                                    "en": ""
+                                },
+                                "credit": null,
+                                "datacite::registeredDoi": null,
+                                "datacite::status": null,
+                                "dateCreated": null,
+                                "dependentFiles": [],
+                                "description": {
+                                    "en": ""
+                                },
+                                "documentType": "pdf",
+                                "fileId": 203,
+                                "fileStage": 10,
+                                "genreId": 1,
+                                "genreIsDependent": false,
+                                "genreIsSupplementary": false,
+                                "genreName": {
+                                    "en": "Article Text"
+                                },
+                                "id": 209,
+                                "language": null,
+                                "locale": "en",
+                                "mimetype": "application/pdf",
+                                "name": {
+                                    "en": "ojsadmin, 3b P. Guzman.pdf"
+                                },
+                                "path": "journals/1/articles/104/submission/proof/104-1-209-1-10-20170614.pdf",
+                                "publisher": {
+                                    "en": ""
+                                },
+                                "revisions": [],
+                                "source": {
+                                    "en": ""
+                                },
+                                "sourceSubmissionFileId": null,
+                                "sponsor": {
+                                    "en": ""
+                                },
+                                "subject": {
+                                    "en": ""
+                                },
+                                "submissionId": 104,
+                                "terms": null,
+                                "updatedAt": "2017-06-14 08:35:41",
+                                "uploaderUserId": 1,
+                                "uploaderUserName": "ojsadmin",
+                                "url": "https://ciney-ojs-tamu.tdl.org/ciney/$$$call$$$/api/file/file-api/download-file?submissionFileId=209&submissionId=104&stageId=5",
+                                "viewable": false
+                            },
+                            "id": 107,
+                            "isApproved": true,
+                            "label": "PDF",
+                            "locale": "en",
+                            "pub-id::publisher-id": null,
+                            "publicationId": 104,
+                            "seq": 0,
+                            "submissionFileId": 209,
+                            "urlPublished": "https://ciney-ojs-tamu.tdl.org/ciney/article/view/104/version/104/107",
+                            "urlRemote": null
+                        }
+                    ],
+                    "id": 104,
+                    "locale": "en",
+                    "pages": "",
+                    "prefix": {
+                        "en": ""
+                    },
+                    "primaryContactId": 111,
+                    "pub-id::publisher-id": null,
+                    "sectionId": 1,
+                    "status": 3,
+                    "submissionId": 104,
+                    "subtitle": {
+                        "en": ""
+                    },
+                    "title": {
+                        "en": "EL DIRECTOR COMO FIL\u00d3SOFO-POETA: PATRICIO GUZM\u00c1N EN NOSTALIGIA DE LA LUZ"
+                    },
+                    "urlPublished": "https://ciney-ojs-tamu.tdl.org/ciney/article/view/104/version/104",
+                    "version": 1
+                }
+            ],
+            "stageId": 4,
+            "status": 3,
+            "statusLabel": "Published",
+            "submissionProgress": "",
+            "urlAuthorWorkflow": "https://ciney-ojs-tamu.tdl.org/ciney/authorDashboard/submission/104",
+            "urlEditorialWorkflow": "https://ciney-ojs-tamu.tdl.org/ciney/workflow/access/104",
+            "urlPublished": "https://ciney-ojs-tamu.tdl.org/ciney/article/view/104",
+            "urlSubmissionWizard": "https://ciney-ojs-tamu.tdl.org/ciney/submission?id=104",
+            "urlWorkflow": "https://ciney-ojs-tamu.tdl.org/ciney/workflow/access/104"
+        },
+        {
+            "_href": "https://ciney-ojs-tamu.tdl.org/ciney/api/v1/submissions/103",
+            "contextId": 1,
+            "currentPublicationId": 103,
+            "datacite::registeredDoi": null,
+            "datacite::status": null,
+            "dateLastActivity": "2017-06-14 08:53:03",
+            "dateSubmitted": "2017-06-14 08:33:23",
+            "id": 103,
+            "lastModified": "2017-06-14 08:53:03",
+            "locale": "en",
+            "publications": [
+                {
+                    "_href": "https://ciney-ojs-tamu.tdl.org/ciney/api/v1/submissions/103/publications/103",
+                    "authorsString": "Noelia Dom\u00ednguez",
+                    "authorsStringIncludeInBrowse": "Noelia Dom\u00ednguez",
+                    "authorsStringShort": "Dom\u00ednguez",
+                    "categoryIds": [],
+                    "coverImage": {
+                        "en": null
+                    },
+                    "datacite::registeredDoi": null,
+                    "datacite::status": null,
+                    "datePublished": "2017-06-14",
+                    "doiObject": null,
+                    "fullTitle": {
+                        "en": "MUJERES QUE SE AMAN MIENTRAS UN HOMBRE LAS MIRA. CINE Y LESFOBIA EN JULIO MEDEM"
+                    },
+                    "galleys": [
+                        {
+                            "datacite::registeredDoi": null,
+                            "datacite::status": null,
+                            "doiObject": null,
+                            "file": {
+                                "_href": "https://ciney-ojs-tamu.tdl.org/ciney/api/v1/submissions/103/files/207",
+                                "assocId": 106,
+                                "assocType": 521,
+                                "caption": null,
+                                "copyrightOwner": null,
+                                "createdAt": "2017-06-14 08:33:23",
+                                "creator": {
+                                    "en": ""
+                                },
+                                "credit": null,
+                                "datacite::registeredDoi": null,
+                                "datacite::status": null,
+                                "dateCreated": null,
+                                "dependentFiles": [],
+                                "description": {
+                                    "en": ""
+                                },
+                                "documentType": "pdf",
+                                "fileId": 201,
+                                "fileStage": 10,
+                                "genreId": 1,
+                                "genreIsDependent": false,
+                                "genreIsSupplementary": false,
+                                "genreName": {
+                                    "en": "Article Text"
+                                },
+                                "id": 207,
+                                "language": null,
+                                "locale": "en",
+                                "mimetype": "application/pdf",
+                                "name": {
+                                    "en": "ojsadmin, 3 Medem.pdf"
+                                },
+                                "path": "journals/1/articles/103/submission/proof/103-1-207-1-10-20170614.pdf",
+                                "publisher": {
+                                    "en": ""
+                                },
+                                "revisions": [],
+                                "source": {
+                                    "en": ""
+                                },
+                                "sourceSubmissionFileId": null,
+                                "sponsor": {
+                                    "en": ""
+                                },
+                                "subject": {
+                                    "en": ""
+                                },
+                                "submissionId": 103,
+                                "terms": null,
+                                "updatedAt": "2017-06-14 08:33:23",
+                                "uploaderUserId": 1,
+                                "uploaderUserName": "ojsadmin",
+                                "url": "https://ciney-ojs-tamu.tdl.org/ciney/$$$call$$$/api/file/file-api/download-file?submissionFileId=207&submissionId=103&stageId=5",
+                                "viewable": false
+                            },
+                            "id": 106,
+                            "isApproved": true,
+                            "label": "PDF",
+                            "locale": "en",
+                            "pub-id::publisher-id": null,
+                            "publicationId": 103,
+                            "seq": 0,
+                            "submissionFileId": 207,
+                            "urlPublished": "https://ciney-ojs-tamu.tdl.org/ciney/article/view/103/version/103/106",
+                            "urlRemote": null
+                        }
+                    ],
+                    "id": 103,
+                    "locale": "en",
+                    "pages": "",
+                    "prefix": {
+                        "en": ""
+                    },
+                    "primaryContactId": 110,
+                    "pub-id::publisher-id": null,
+                    "sectionId": 1,
+                    "status": 3,
+                    "submissionId": 103,
+                    "subtitle": {
+                        "en": ""
+                    },
+                    "title": {
+                        "en": "MUJERES QUE SE AMAN MIENTRAS UN HOMBRE LAS MIRA. CINE Y LESFOBIA EN JULIO MEDEM"
+                    },
+                    "urlPublished": "https://ciney-ojs-tamu.tdl.org/ciney/article/view/103/version/103",
+                    "version": 1
+                }
+            ],
+            "stageId": 4,
+            "status": 3,
+            "statusLabel": "Published",
+            "submissionProgress": "",
+            "urlAuthorWorkflow": "https://ciney-ojs-tamu.tdl.org/ciney/authorDashboard/submission/103",
+            "urlEditorialWorkflow": "https://ciney-ojs-tamu.tdl.org/ciney/workflow/access/103",
+            "urlPublished": "https://ciney-ojs-tamu.tdl.org/ciney/article/view/103",
+            "urlSubmissionWizard": "https://ciney-ojs-tamu.tdl.org/ciney/submission?id=103",
+            "urlWorkflow": "https://ciney-ojs-tamu.tdl.org/ciney/workflow/access/103"
+        },
+        {
+            "_href": "https://ciney-ojs-tamu.tdl.org/ciney/api/v1/submissions/102",
+            "contextId": 1,
+            "currentPublicationId": 102,
+            "datacite::registeredDoi": null,
+            "datacite::status": null,
+            "dateLastActivity": "2017-06-14 08:53:03",
+            "dateSubmitted": "2017-06-14 08:31:27",
+            "id": 102,
+            "lastModified": "2017-06-14 08:53:03",
+            "locale": "en",
+            "publications": [
+                {
+                    "_href": "https://ciney-ojs-tamu.tdl.org/ciney/api/v1/submissions/102/publications/102",
+                    "authorsString": "Jos\u00e9 Mar\u00eda Pers\u00e1nch",
+                    "authorsStringIncludeInBrowse": "Jos\u00e9 Mar\u00eda Pers\u00e1nch",
+                    "authorsStringShort": "Pers\u00e1nch",
+                    "categoryIds": [],
+                    "coverImage": {
+                        "en": null
+                    },
+                    "datacite::registeredDoi": null,
+                    "datacite::status": null,
+                    "datePublished": "2017-06-14",
+                    "doiObject": null,
+                    "fullTitle": {
+                        "en": "REVISTANDO LA CABINA: AN\u00c1LISIS DEL MUNDO SIMB\u00d3LICO COMO ALEGOR\u00c1 NACIONAL"
+                    },
+                    "galleys": [
+                        {
+                            "datacite::registeredDoi": null,
+                            "datacite::status": null,
+                            "doiObject": null,
+                            "file": {
+                                "_href": "https://ciney-ojs-tamu.tdl.org/ciney/api/v1/submissions/102/files/205",
+                                "assocId": 105,
+                                "assocType": 521,
+                                "caption": null,
+                                "copyrightOwner": null,
+                                "createdAt": "2017-06-14 08:31:27",
+                                "creator": {
+                                    "en": ""
+                                },
+                                "credit": null,
+                                "datacite::registeredDoi": null,
+                                "datacite::status": null,
+                                "dateCreated": null,
+                                "dependentFiles": [],
+                                "description": {
+                                    "en": ""
+                                },
+                                "documentType": "pdf",
+                                "fileId": 199,
+                                "fileStage": 10,
+                                "genreId": 1,
+                                "genreIsDependent": false,
+                                "genreIsSupplementary": false,
+                                "genreName": {
+                                    "en": "Article Text"
+                                },
+                                "id": 205,
+                                "language": null,
+                                "locale": "en",
+                                "mimetype": "application/pdf",
+                                "name": {
+                                    "en": "ojsadmin, 2 La cabina.pdf"
+                                },
+                                "path": "journals/1/articles/102/submission/proof/102-1-205-1-10-20170614.pdf",
+                                "publisher": {
+                                    "en": ""
+                                },
+                                "revisions": [],
+                                "source": {
+                                    "en": ""
+                                },
+                                "sourceSubmissionFileId": null,
+                                "sponsor": {
+                                    "en": ""
+                                },
+                                "subject": {
+                                    "en": ""
+                                },
+                                "submissionId": 102,
+                                "terms": null,
+                                "updatedAt": "2017-06-14 08:31:27",
+                                "uploaderUserId": 1,
+                                "uploaderUserName": "ojsadmin",
+                                "url": "https://ciney-ojs-tamu.tdl.org/ciney/$$$call$$$/api/file/file-api/download-file?submissionFileId=205&submissionId=102&stageId=5",
+                                "viewable": false
+                            },
+                            "id": 105,
+                            "isApproved": true,
+                            "label": "PDF",
+                            "locale": "en",
+                            "pub-id::publisher-id": null,
+                            "publicationId": 102,
+                            "seq": 0,
+                            "submissionFileId": 205,
+                            "urlPublished": "https://ciney-ojs-tamu.tdl.org/ciney/article/view/102/version/102/105",
+                            "urlRemote": null
+                        }
+                    ],
+                    "id": 102,
+                    "locale": "en",
+                    "pages": "",
+                    "prefix": {
+                        "en": ""
+                    },
+                    "primaryContactId": 109,
+                    "pub-id::publisher-id": null,
+                    "sectionId": 1,
+                    "status": 3,
+                    "submissionId": 102,
+                    "subtitle": {
+                        "en": ""
+                    },
+                    "title": {
+                        "en": "REVISTANDO LA CABINA: AN\u00c1LISIS DEL MUNDO SIMB\u00d3LICO COMO ALEGOR\u00c1 NACIONAL"
+                    },
+                    "urlPublished": "https://ciney-ojs-tamu.tdl.org/ciney/article/view/102/version/102",
+                    "version": 1
+                }
+            ],
+            "stageId": 4,
+            "status": 3,
+            "statusLabel": "Published",
+            "submissionProgress": "",
+            "urlAuthorWorkflow": "https://ciney-ojs-tamu.tdl.org/ciney/authorDashboard/submission/102",
+            "urlEditorialWorkflow": "https://ciney-ojs-tamu.tdl.org/ciney/workflow/access/102",
+            "urlPublished": "https://ciney-ojs-tamu.tdl.org/ciney/article/view/102",
+            "urlSubmissionWizard": "https://ciney-ojs-tamu.tdl.org/ciney/submission?id=102",
+            "urlWorkflow": "https://ciney-ojs-tamu.tdl.org/ciney/workflow/access/102"
+        },
+        {
+            "_href": "https://ciney-ojs-tamu.tdl.org/ciney/api/v1/submissions/101",
+            "contextId": 1,
+            "currentPublicationId": 101,
+            "datacite::registeredDoi": null,
+            "datacite::status": null,
+            "dateLastActivity": "2017-06-14 08:53:03",
+            "dateSubmitted": "2017-06-14 08:29:17",
+            "id": 101,
+            "lastModified": "2017-06-14 08:53:03",
+            "locale": "en",
+            "publications": [
+                {
+                    "_href": "https://ciney-ojs-tamu.tdl.org/ciney/api/v1/submissions/101/publications/101",
+                    "authorsString": "Marisol Soto",
+                    "authorsStringIncludeInBrowse": "Marisol Soto",
+                    "authorsStringShort": "Soto",
+                    "categoryIds": [],
+                    "coverImage": {
+                        "en": null
+                    },
+                    "datacite::registeredDoi": null,
+                    "datacite::status": null,
+                    "datePublished": "2017-06-14",
+                    "doiObject": null,
+                    "fullTitle": {
+                        "en": "DE LA INCERTIDUMBRE A LA CERTEZA, DE LA NEGACI\u00d3N A LA REPRESENTATCI\u00d3N: IM\u00c1GENES QUE NARRAN LA VIOLENCIA  Y LA APROPIACI\u00d3N DE MENORES  EN ARGENTINA DURANTE EL \u00daLTIMO GOBIERNO DE FACTO"
+                    },
+                    "galleys": [
+                        {
+                            "datacite::registeredDoi": null,
+                            "datacite::status": null,
+                            "doiObject": null,
+                            "file": {
+                                "_href": "https://ciney-ojs-tamu.tdl.org/ciney/api/v1/submissions/101/files/203",
+                                "assocId": 104,
+                                "assocType": 521,
+                                "caption": null,
+                                "copyrightOwner": null,
+                                "createdAt": "2017-06-14 08:29:17",
+                                "creator": {
+                                    "en": ""
+                                },
+                                "credit": null,
+                                "datacite::registeredDoi": null,
+                                "datacite::status": null,
+                                "dateCreated": null,
+                                "dependentFiles": [],
+                                "description": {
+                                    "en": ""
+                                },
+                                "documentType": "pdf",
+                                "fileId": 197,
+                                "fileStage": 10,
+                                "genreId": 1,
+                                "genreIsDependent": false,
+                                "genreIsSupplementary": false,
+                                "genreName": {
+                                    "en": "Article Text"
+                                },
+                                "id": 203,
+                                "language": null,
+                                "locale": "en",
+                                "mimetype": "application/pdf",
+                                "name": {
+                                    "en": "ojsadmin, 1 Soto violencia.pdf"
+                                },
+                                "path": "journals/1/articles/101/submission/proof/101-1-203-1-10-20170614.pdf",
+                                "publisher": {
+                                    "en": ""
+                                },
+                                "revisions": [],
+                                "source": {
+                                    "en": ""
+                                },
+                                "sourceSubmissionFileId": null,
+                                "sponsor": {
+                                    "en": ""
+                                },
+                                "subject": {
+                                    "en": ""
+                                },
+                                "submissionId": 101,
+                                "terms": null,
+                                "updatedAt": "2017-06-14 08:29:17",
+                                "uploaderUserId": 1,
+                                "uploaderUserName": "ojsadmin",
+                                "url": "https://ciney-ojs-tamu.tdl.org/ciney/$$$call$$$/api/file/file-api/download-file?submissionFileId=203&submissionId=101&stageId=5",
+                                "viewable": false
+                            },
+                            "id": 104,
+                            "isApproved": true,
+                            "label": "PDF",
+                            "locale": "en",
+                            "pub-id::publisher-id": null,
+                            "publicationId": 101,
+                            "seq": 0,
+                            "submissionFileId": 203,
+                            "urlPublished": "https://ciney-ojs-tamu.tdl.org/ciney/article/view/101/version/101/104",
+                            "urlRemote": null
+                        }
+                    ],
+                    "id": 101,
+                    "locale": "en",
+                    "pages": "",
+                    "prefix": {
+                        "en": ""
+                    },
+                    "primaryContactId": 108,
+                    "pub-id::publisher-id": null,
+                    "sectionId": 1,
+                    "status": 3,
+                    "submissionId": 101,
+                    "subtitle": {
+                        "en": ""
+                    },
+                    "title": {
+                        "en": "DE LA INCERTIDUMBRE A LA CERTEZA, DE LA NEGACI\u00d3N A LA REPRESENTATCI\u00d3N: IM\u00c1GENES QUE NARRAN LA VIOLENCIA  Y LA APROPIACI\u00d3N DE MENORES  EN ARGENTINA DURANTE EL \u00daLTIMO GOBIERNO DE FACTO"
+                    },
+                    "urlPublished": "https://ciney-ojs-tamu.tdl.org/ciney/article/view/101/version/101",
+                    "version": 1
+                }
+            ],
+            "stageId": 4,
+            "status": 3,
+            "statusLabel": "Published",
+            "submissionProgress": "",
+            "urlAuthorWorkflow": "https://ciney-ojs-tamu.tdl.org/ciney/authorDashboard/submission/101",
+            "urlEditorialWorkflow": "https://ciney-ojs-tamu.tdl.org/ciney/workflow/access/101",
+            "urlPublished": "https://ciney-ojs-tamu.tdl.org/ciney/article/view/101",
+            "urlSubmissionWizard": "https://ciney-ojs-tamu.tdl.org/ciney/submission?id=101",
+            "urlWorkflow": "https://ciney-ojs-tamu.tdl.org/ciney/workflow/access/101"
+        },
+        {
+            "_href": "https://ciney-ojs-tamu.tdl.org/ciney/api/v1/submissions/100",
+            "contextId": 1,
+            "currentPublicationId": 100,
+            "datacite::registeredDoi": null,
+            "datacite::status": null,
+            "dateLastActivity": "2017-06-14 08:53:03",
+            "dateSubmitted": "2017-06-14 08:27:29",
+            "id": 100,
+            "lastModified": "2017-06-14 08:53:03",
+            "locale": "en",
+            "publications": [
+                {
+                    "_href": "https://ciney-ojs-tamu.tdl.org/ciney/api/v1/submissions/100/publications/100",
+                    "authorsString": "Rick Curry",
+                    "authorsStringIncludeInBrowse": "Rick Curry",
+                    "authorsStringShort": "Curry",
+                    "categoryIds": [],
+                    "coverImage": {
+                        "en": null
+                    },
+                    "datacite::registeredDoi": null,
+                    "datacite::status": null,
+                    "datePublished": "2017-06-14",
+                    "doiObject": null,
+                    "fullTitle": {
+                        "en": "Indice"
+                    },
+                    "galleys": [
+                        {
+                            "datacite::registeredDoi": null,
+                            "datacite::status": null,
+                            "doiObject": null,
+                            "file": {
+                                "_href": "https://ciney-ojs-tamu.tdl.org/ciney/api/v1/submissions/100/files/201",
+                                "assocId": 103,
+                                "assocType": 521,
+                                "caption": null,
+                                "copyrightOwner": null,
+                                "createdAt": "2017-06-14 08:27:29",
+                                "creator": {
+                                    "en": ""
+                                },
+                                "credit": null,
+                                "datacite::registeredDoi": null,
+                                "datacite::status": null,
+                                "dateCreated": null,
+                                "dependentFiles": [],
+                                "description": {
+                                    "en": ""
+                                },
+                                "documentType": "pdf",
+                                "fileId": 195,
+                                "fileStage": 10,
+                                "genreId": 1,
+                                "genreIsDependent": false,
+                                "genreIsSupplementary": false,
+                                "genreName": {
+                                    "en": "Article Text"
+                                },
+                                "id": 201,
+                                "language": null,
+                                "locale": "en",
+                                "mimetype": "application/pdf",
+                                "name": {
+                                    "en": "ojsadmin, 0.pdf"
+                                },
+                                "path": "journals/1/articles/100/submission/proof/100-1-201-1-10-20170614.pdf",
+                                "publisher": {
+                                    "en": ""
+                                },
+                                "revisions": [],
+                                "source": {
+                                    "en": ""
+                                },
+                                "sourceSubmissionFileId": null,
+                                "sponsor": {
+                                    "en": ""
+                                },
+                                "subject": {
+                                    "en": ""
+                                },
+                                "submissionId": 100,
+                                "terms": null,
+                                "updatedAt": "2017-06-14 08:27:29",
+                                "uploaderUserId": 1,
+                                "uploaderUserName": "ojsadmin",
+                                "url": "https://ciney-ojs-tamu.tdl.org/ciney/$$$call$$$/api/file/file-api/download-file?submissionFileId=201&submissionId=100&stageId=5",
+                                "viewable": false
+                            },
+                            "id": 103,
+                            "isApproved": true,
+                            "label": "PDF",
+                            "locale": "en",
+                            "pub-id::publisher-id": null,
+                            "publicationId": 100,
+                            "seq": 0,
+                            "submissionFileId": 201,
+                            "urlPublished": "https://ciney-ojs-tamu.tdl.org/ciney/article/view/100/version/100/103",
+                            "urlRemote": null
+                        }
+                    ],
+                    "id": 100,
+                    "locale": "en",
+                    "pages": "",
+                    "prefix": {
+                        "en": ""
+                    },
+                    "primaryContactId": 107,
+                    "pub-id::publisher-id": null,
+                    "sectionId": 2,
+                    "status": 3,
+                    "submissionId": 100,
+                    "subtitle": {
+                        "en": ""
+                    },
+                    "title": {
+                        "en": "Indice"
+                    },
+                    "urlPublished": "https://ciney-ojs-tamu.tdl.org/ciney/article/view/100/version/100",
+                    "version": 1
+                }
+            ],
+            "stageId": 4,
+            "status": 3,
+            "statusLabel": "Published",
+            "submissionProgress": "",
+            "urlAuthorWorkflow": "https://ciney-ojs-tamu.tdl.org/ciney/authorDashboard/submission/100",
+            "urlEditorialWorkflow": "https://ciney-ojs-tamu.tdl.org/ciney/workflow/access/100",
+            "urlPublished": "https://ciney-ojs-tamu.tdl.org/ciney/article/view/100",
+            "urlSubmissionWizard": "https://ciney-ojs-tamu.tdl.org/ciney/submission?id=100",
+            "urlWorkflow": "https://ciney-ojs-tamu.tdl.org/ciney/workflow/access/100"
+        }
+    ],
+    "coverImage": {
+        "en": "cover_issue_9_en_US.jpg"
+    },
+    "coverImageAltText": {
+        "en": ""
+    },
+    "coverImageUrl": {
+        "en": "https://ciney-ojs-tamu.tdl.org/public/journals/1/cover_issue_9_en_US.jpg"
+    },
+    "dateNotified": null,
+    "datePublished": "2017-06-14 00:00:00",
+    "description": {
+        "en": ""
+    },
+    "doiObject": null,
+    "galleys": [],
+    "id": 9,
+    "identification": "Vol. 5 No. 1 (2016)",
+    "journalId": 1,
+    "lastModified": "2017-06-14 08:54:44",
+    "number": "1",
+    "openAccessDate": null,
+    "originalStyleFileName": null,
+    "published": true,
+    "publishedUrl": "https://ciney-ojs-tamu.tdl.org/ciney/issue/view/9",
+    "sections": [
+        {
+            "abbrev": {
+                "en": "in"
+            },
+            "abstractsNotRequired": true,
+            "contextId": 1,
+            "editorRestricted": true,
+            "hideAuthor": false,
+            "hideTitle": false,
+            "id": 2,
+            "identifyType": {
+                "en": ""
+            },
+            "isInactive": false,
+            "metaIndexed": true,
+            "metaReviewed": false,
+            "policy": {
+                "en": ""
+            },
+            "reviewFormId": null,
+            "sequence": 1,
+            "title": {
+                "en": "Index"
+            },
+            "wordCount": null,
+            "seq": 1
+        },
+        {
+            "abbrev": {
+                "en": "ART"
+            },
+            "abstractsNotRequired": true,
+            "contextId": 1,
+            "editorRestricted": false,
+            "hideAuthor": false,
+            "hideTitle": false,
+            "id": 1,
+            "identifyType": {
+                "en": ""
+            },
+            "isInactive": false,
+            "metaIndexed": true,
+            "metaReviewed": true,
+            "policy": {
+                "en": ""
+            },
+            "reviewFormId": null,
+            "sequence": 2,
+            "title": {
+                "en": "Articles"
+            },
+            "wordCount": null,
+            "seq": 2
+        },
+        {
+            "abbrev": {
+                "en": "Int"
+            },
+            "abstractsNotRequired": true,
+            "contextId": 1,
+            "editorRestricted": false,
+            "hideAuthor": false,
+            "hideTitle": false,
+            "id": 3,
+            "identifyType": {
+                "en": ""
+            },
+            "isInactive": false,
+            "metaIndexed": true,
+            "metaReviewed": false,
+            "policy": {
+                "en": ""
+            },
+            "reviewFormId": null,
+            "sequence": 3,
+            "title": {
+                "en": "Interview"
+            },
+            "wordCount": 0,
+            "seq": 3
+        },
+        {
+            "abbrev": {
+                "en": "Rev"
+            },
+            "abstractsNotRequired": true,
+            "contextId": 1,
+            "editorRestricted": false,
+            "hideAuthor": false,
+            "hideTitle": false,
+            "id": 4,
+            "identifyType": {
+                "en": ""
+            },
+            "isInactive": false,
+            "metaIndexed": true,
+            "metaReviewed": false,
+            "policy": {
+                "en": ""
+            },
+            "reviewFormId": null,
+            "sequence": 4,
+            "title": {
+                "en": "Reviews"
+            },
+            "wordCount": 0,
+            "seq": 4
+        }
+    ],
+    "showNumber": true,
+    "showTitle": false,
+    "showVolume": true,
+    "showYear": true,
+    "styleFileName": null,
+    "title": {
+        "en": "Cine y... Revista de estudios interdisciplinarios sobre cine en espa\u00f1ol / Journal of Interdisciplinary Studies on Film in Spanish"
+    },
+    "urlPath": null,
+    "volume": 5,
+    "year": 2016,
+    "datacite::status": null,
+    "datacite::registeredDoi": null
+}
