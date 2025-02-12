@@ -3,16 +3,18 @@ import json
 import yaml
 from csv import DictWriter
 from lxml import etree
+from tqdm import tqdm
 
 
 class Article:
-    def __init__(self, article_data, oai_endpoint):
+    def __init__(self, article_data, oai_endpoint, identification):
         self.namespaces = {
             "oai": "http://www.openarchives.org/OAI/2.0/",
             "oai_dc": "http://www.openarchives.org/OAI/2.0/oai_dc/",
             "dc": "http://purl.org/dc/elements/1.1/"
         }
         self.id = article_data.get("id")
+        self.parent = identification
         self.all_data = article_data
         self.title = article_data["publications"][0]["fullTitle"]
         self.authors = article_data["publications"][0].get("authorsString")
@@ -31,12 +33,18 @@ class Article:
         creator = self.tree.find(".//dc:creator", namespaces=self.namespaces)
         date = self.tree.find(".//dc:date", namespaces=self.namespaces)
         source = self.tree.find(".//dc:source", namespaces=self.namespaces)
+        try:
+            original = self.all_data['publications'][0]['urlPublished']
+        except KeyError:
+            original = ""
         return {
-            "bundle:ORIGINAL": self.all_data['urlPublished'],
+            "bundle:ORIGINAL": original,
             'dc.title': title.text if title is not None else "",
             'dc.creator': creator.text if creator is not None else "",
             'dc.date': date.text if date is not None else "",
             'dc.source': source.text if source is not None else "",
+            'published': self.all_data.get('statusLabel', ''),
+            'parent': self.parent
         }
 
 
@@ -67,15 +75,16 @@ class OJSnake:
         r = requests.get(f"{self.url}/api/v1/issues", headers=self.headers)
         return r.json()
 
-    def get_articles(self, issue_id):
+    def get_articles(self, issue_id, identification):
         all_articles = self.get_articles_in_issue(issue_id)
-        return [Article(article, self.oai_endpoint) for article in all_articles.get("articles", [])]
+        # Is status and statusLabel consistent across all OJS instances?
+        return [Article(article, self.oai_endpoint, identification) for article in tqdm(all_articles.get("articles", []))]
 
     def get_all_articles(self):
         all_issues = self.get_issues()
         all_articles = []
         for issue in all_issues.get('items', []):
-            issue_articles = self.get_articles(issue.get("id"))
+            issue_articles = self.get_articles(issue.get("id"), issue.get("identification"))
             for article in issue_articles:
                 all_articles.append(article.for_csv)
         return all_articles
@@ -119,7 +128,8 @@ class OJSnake:
             writer = DictWriter(out, fieldnames=all_articles[0].keys())
             writer.writeheader()
             for article in all_articles:
-                writer.writerow(article)
+                if article.get('published') == "Published":
+                    writer.writerow(article)
 
 
     def get_articles_in_issue(self, issue_id):
@@ -130,7 +140,7 @@ class OJSnake:
 if __name__ == "__main__":
     with open("config/config.yml", 'r') as stream:
         yml = yaml.safe_load(stream)
-    x = OJSnake(yml.get('ciney'))
+    x = OJSnake(yml.get('aavpt'))
     # x.write_issues('issues_test.csv')
     # x.write_volumes('volumes_test.csv')
     x.write_articles(f"article_test.csv")
