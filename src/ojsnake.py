@@ -34,9 +34,16 @@ class Article:
         date = self.tree.find(".//dc:date", namespaces=self.namespaces)
         source = self.tree.find(".//dc:source", namespaces=self.namespaces)
         try:
-            original = self.all_data['publications'][0]['urlPublished']
-        except KeyError:
-            original = ""
+            published_galley = self.all_data['publications'][0]['galleys'][0]['urlPublished']
+        except:
+            published_galley = None
+        if published_galley:
+            original = published_galley
+        else:
+            try:
+                original = self.all_data['publications'][0]['urlPublished']
+            except KeyError:
+                original = ""
         return {
             "bundle:ORIGINAL": original,
             'dc.title': title.text if title is not None else "",
@@ -140,7 +147,7 @@ class OJSnake:
 if __name__ == "__main__":
     with open("config/config.yml", 'r') as stream:
         yml = yaml.safe_load(stream)
-    x = OJSnake(yml.get('aavpt'))
+    x = OJSnake(yml.get('ciney'))
     # x.write_issues('issues_test.csv')
     # x.write_volumes('volumes_test.csv')
     x.write_articles(f"article_test.csv")
