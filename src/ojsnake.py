@@ -52,8 +52,9 @@ class Article:
             'dc.creator': creator.text if creator is not None else "",
             'dc.date': date.text if date is not None else "",
             'dc.source': source.text if source is not None else "",
+            "dspace.entity.type": "Publication",
             'published': self.all_data.get('statusLabel', ''),
-            'parent': self.parent
+            "relation.isPublicationOfJournalIssue": ""
         }
 
     @staticmethod
@@ -71,8 +72,10 @@ class Issue:
             "dc.description": issue_data["description"]["en"],
             "dc.title": f"{journal_title}: {issue_data.get('identification')}",
             "dc.identifier": issue_data.get("number"),
-            "dc.created": issue_data.get("year"),
+            "dc.date": issue_data.get("year"),
             "dcterms.type": "Issue",
+            "dspace.entity.type": "JournalIssue",
+            "relation.isIssueOfJournalVolume": ""
         }
 
 
@@ -114,9 +117,12 @@ class OJSnake:
             if issue.get('volume'):
                 if issue['volume'] not in volumes:
                     volumes[issue['volume']] = {
+                        'bundle:THUMBNAIL': self.journal_config.get('default_thumbnail', ''),
                         'dc.title': f"{self.journal_title}: Volume {issue['volume']}",
-                        "dc.created": issue['year'],
+                        "dc.date": issue['year'],
                         "dcterms.type": "Volume",
+                        "dspace.entity.type": "JournalVolume",
+                        "relation.isVolumeOfJournal": ""
                     }
         return [v for k, v in volumes.items()]
 
@@ -158,6 +164,7 @@ class OJSnake:
             "dc.subject": ",".join(self.journal_config.get('subjects', [])),
             "dc.description": self.journal_config.get('description', ''),
             "dcterms.alternative": self.journal_config.get('alternative', ''),
+            "dspace.entity.type": "Journal",
         }
 
     def write_title_data(self):
@@ -174,5 +181,5 @@ if __name__ == "__main__":
     x = OJSnake(yml.get('ciney'))
     x.write_issues()
     x.write_volumes()
-    # x.write_articles()
-    # x.write_title_data()
+    x.write_articles()
+    x.write_title_data()
