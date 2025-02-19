@@ -4,6 +4,7 @@ import yaml
 from csv import DictWriter
 from lxml import etree
 from tqdm import tqdm
+import base64
 
 
 class Article:
@@ -46,6 +47,7 @@ class Article:
                 original = ""
         return {
             "bundle:ORIGINAL": original,
+            "bundle:THUMBNAIL": self.get_thumbnail(original),
             'dc.title': title.text if title is not None else "",
             'dc.creator': creator.text if creator is not None else "",
             'dc.date': date.text if date is not None else "",
@@ -53,6 +55,11 @@ class Article:
             'published': self.all_data.get('statusLabel', ''),
             'parent': self.parent
         }
+
+    @staticmethod
+    def get_thumbnail(url):
+        encoded = base64.urlsafe_b64encode(url.encode()).decode()
+        return f"https://api.library.tamu.edu/iiif/2/{encoded};1/full/159,/0/default.jpg"
 
 
 class Issue:
@@ -113,25 +120,25 @@ class OJSnake:
                     }
         return [v for k, v in volumes.items()]
 
-    def write_volumes(self, output_file):
+    def write_volumes(self):
         all_volumes = self.get_all_volumes()
-        with open(output_file, "w", encoding="utf-8") as out:
+        with open(f"{self.output}/volumes.csv", "w", encoding="utf-8") as out:
             writer = DictWriter(out, fieldnames=all_volumes[0].keys())
             writer.writeheader()
             for volume in all_volumes:
                 writer.writerow(volume)
 
-    def write_issues(self, output_file):
+    def write_issues(self):
         all_issues = self.get_all_issues()
-        with open(output_file, "w", encoding="utf-8") as out:
+        with open(f"{self.output}/issues.csv", "w", encoding="utf-8") as out:
             writer = DictWriter(out, fieldnames=all_issues[0].for_csv.keys())
             writer.writeheader()
             for issue in all_issues:
                 writer.writerow(issue.for_csv)
 
-    def write_articles(self, output_file):
+    def write_articles(self):
         all_articles = self.get_all_articles()
-        with open(output_file, "w", encoding="utf-8") as out:
+        with open(f"{self.output}/articles.csv", "w", encoding="utf-8") as out:
             writer = DictWriter(out, fieldnames=all_articles[0].keys())
             writer.writeheader()
             for article in all_articles:
@@ -143,11 +150,29 @@ class OJSnake:
         r = requests.get(f"{self.url}/api/v1/issues/{issue_id}", headers=self.headers)
         return r.json()
 
+    def get_title_data(self):
+        return {
+            "bundle:THUMBNAIL": self.journal_config.get('default_thumbnail', ''),
+            "dc.title": self.journal_title,
+            "dc.date": self.journal_config.get('date', ''),
+            "dc.subject": ",".join(self.journal_config.get('subjects', [])),
+            "dc.description": self.journal_config.get('description', ''),
+            "dcterms.alternative": self.journal_config.get('alternative', ''),
+        }
+
+    def write_title_data(self):
+        title = self.get_title_data()
+        with open(f"{self.output}/title.csv", "w", encoding="utf-8") as out:
+            writer = DictWriter(out, fieldnames=title.keys())
+            writer.writeheader()
+            writer.writerow(title)
+
 
 if __name__ == "__main__":
     with open("config/config.yml", 'r') as stream:
         yml = yaml.safe_load(stream)
     x = OJSnake(yml.get('ciney'))
-    # x.write_issues('issues_test.csv')
-    # x.write_volumes('volumes_test.csv')
-    x.write_articles(f"article_test.csv")
+    x.write_issues()
+    x.write_volumes()
+    # x.write_articles()
+    # x.write_title_data()

@@ -4,3 +4,12 @@ journal_title:
   oai_endpoint: https://{title}-tamu.tdl.org/{title}/oai
   output_directory: "output"
   title: "Journal Title"
+  default_thumbnail: "https:://{default}/{thumbnail}.{ext}"
+  date: "2008-2016"
+  description: "Description"
+  subjects:
+    - Motion pictures -- History
+    - Motion pictures
+    - Motion pictures, Mexican
+    - Motion pictures, Spanish
+  alternative: ""
