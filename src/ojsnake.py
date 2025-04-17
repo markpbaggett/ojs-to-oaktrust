@@ -54,7 +54,7 @@ class Article:
             'dc.source': source.text if source is not None else "",
             "dspace.entity.type": "Publication",
             'published': self.all_data.get('statusLabel', ''),
-            "relation.isPublicationOfJournalIssue": ""
+            "relation.isJournalIssueOfPublication": ""
         }
 
     @staticmethod
@@ -75,7 +75,7 @@ class Issue:
             "dc.date": issue_data.get("year"),
             "dcterms.type": "Issue",
             "dspace.entity.type": "JournalIssue",
-            "relation.isIssueOfJournalVolume": ""
+            "relation.isJournalVolumeOfIssue": ""
         }
 
 
@@ -122,7 +122,7 @@ class OJSnake:
                         "dc.date": issue['year'],
                         "dcterms.type": "Volume",
                         "dspace.entity.type": "JournalVolume",
-                        "relation.isVolumeOfJournal": ""
+                        "relation.isJournalOfVolume": ""
                     }
         return [v for k, v in volumes.items()]
 
