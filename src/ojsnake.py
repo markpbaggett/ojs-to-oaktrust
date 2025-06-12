@@ -5,16 +5,19 @@ from csv import DictWriter
 from lxml import etree
 from tqdm import tqdm
 import base64
+import os
+from bs4 import BeautifulSoup as bs
 
 
 class Article:
-    def __init__(self, article_data, oai_endpoint, identification):
+    def __init__(self, article_data, oai_endpoint, identification, base_thumb=""):
         self.namespaces = {
             "oai": "http://www.openarchives.org/OAI/2.0/",
             "oai_dc": "http://www.openarchives.org/OAI/2.0/oai_dc/",
             "dc": "http://purl.org/dc/elements/1.1/"
         }
         self.id = article_data.get("id")
+        self.base_thumb = base_thumb
         self.parent = identification
         self.all_data = article_data
         self.title = article_data["publications"][0]["fullTitle"]
@@ -47,7 +50,7 @@ class Article:
                 original = ""
         return {
             "bundle:ORIGINAL": original,
-            "bundle:THUMBNAIL": self.get_thumbnail(original),
+            "bundle:THUMBNAIL": self.get_thumbnail(original, self.base_thumb),
             'dc.title': title.text if title is not None else "",
             'dc.creator': creator.text if creator is not None else "",
             'dc.date': date.text if date is not None else "",
@@ -58,18 +61,27 @@ class Article:
         }
 
     @staticmethod
-    def get_thumbnail(url):
+    def get_thumbnail(url, base=""):
         encoded = base64.urlsafe_b64encode(url.encode()).decode()
-        return f"https://api.library.tamu.edu/iiif/2/{encoded};1/full/159,/0/default.jpg"
+        thumbnail = f"https://api.library.tamu.edu/iiif/2/{encoded};1/full/159,/0/default.jpg"
+        r = requests.get(thumbnail)
+        if r.status_code == 200:
+            return thumbnail
+        else:
+            return base
 
 
 class Issue:
     def __init__(self, issue_data, journal_title):
         self.all_data = issue_data
+        try:
+            cover_image = issue_data["coverImageUrl"]["en"]
+        except TypeError:
+            cover_image = ""
         self.for_csv = {
-            "bundle:THUMBNAIL": issue_data["coverImageUrl"]["en"],
+            "bundle:THUMBNAIL": cover_image,
             "dcterms.available": issue_data["datePublished"],
-            "dc.description": issue_data["description"]["en"],
+            "dc.description": bs(issue_data["description"]["en"], "html.parser").get_text(),
             "dc.title": f"{journal_title}: {issue_data.get('identification')}",
             "dc.identifier": issue_data.get("number"),
             "dc.date": issue_data.get("year"),
@@ -90,12 +102,13 @@ class OJSnake:
 
     def get_issues(self):
         r = requests.get(f"{self.url}/api/v1/issues", headers=self.headers)
+        print(r.json())
         return r.json()
 
     def get_articles(self, issue_id, identification):
         all_articles = self.get_articles_in_issue(issue_id)
         # Is status and statusLabel consistent across all OJS instances?
-        return [Article(article, self.oai_endpoint, identification) for article in tqdm(all_articles.get("articles", []))]
+        return [Article(article, self.oai_endpoint, identification, self.journal_config.get('default_thumbnail', '')) for article in tqdm(all_articles.get("articles", []))]
 
     def get_all_articles(self):
         all_issues = self.get_issues()
@@ -136,6 +149,7 @@ class OJSnake:
 
     def write_issues(self):
         all_issues = self.get_all_issues()
+        os.makedirs(self.output, exist_ok=True)
         with open(f"{self.output}/issues.csv", "w", encoding="utf-8") as out:
             writer = DictWriter(out, fieldnames=all_issues[0].for_csv.keys())
             writer.writeheader()
@@ -178,7 +192,7 @@ class OJSnake:
 if __name__ == "__main__":
     with open("config/config.yml", 'r') as stream:
         yml = yaml.safe_load(stream)
-    x = OJSnake(yml.get('ciney'))
+    x = OJSnake(yml.get('paj'))
     x.write_issues()
     x.write_volumes()
     x.write_articles()
