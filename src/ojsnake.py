@@ -38,8 +38,16 @@ class Article:
         date = self.tree.find(".//dc:date", namespaces=self.namespaces)
         source = self.tree.find(".//dc:source", namespaces=self.namespaces)
         try:
-            published_galley = self.all_data['publications'][0]['galleys'][0]['urlPublished']
+            all_galleys = self.all_data['publications'][0]['galleys']
+            for galley in all_galleys:
+                r = requests.get(galley['urlPublished'])
+                if r.status_code == 200:
+                    published_galley = galley['urlPublished']
+                    break
+                else:
+                    print('Galley Not Published! Trying another.')
         except:
+            print('No Galley Found!')
             published_galley = None
         if published_galley:
             original = published_galley
@@ -102,7 +110,6 @@ class OJSnake:
 
     def get_issues(self):
         r = requests.get(f"{self.url}/api/v1/issues", headers=self.headers)
-        print(r.json())
         return r.json()
 
     def get_articles(self, issue_id, identification):
