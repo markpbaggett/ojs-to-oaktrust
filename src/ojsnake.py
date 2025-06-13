@@ -115,6 +115,7 @@ class OJSnake:
     def get_articles(self, issue_id, identification):
         all_articles = self.get_articles_in_issue(issue_id)
         # Is status and statusLabel consistent across all OJS instances?
+        print(f"Getting Articles from OJS for Issue {identification}.")
         return [Article(article, self.oai_endpoint, identification, self.journal_config.get('default_thumbnail', '')) for article in tqdm(all_articles.get("articles", []))]
 
     def get_all_articles(self):
