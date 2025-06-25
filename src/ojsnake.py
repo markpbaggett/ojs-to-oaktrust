@@ -9,6 +9,7 @@ import base64
 import os
 from bs4 import BeautifulSoup as bs
 from pdf2image import convert_from_path
+import argparse
 
 
 class Article:
@@ -43,7 +44,7 @@ class Article:
         creator = None
         date = None
         source = None
-        if self.tree:
+        if self.tree is not None:
             title = self.tree.find(
                 ".//dc:title", namespaces=self.namespaces
             )
@@ -257,9 +258,13 @@ class OJSnake:
 
 
 if __name__ == "__main__":
-    with open("config/config.yml", 'r') as stream:
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-y', '--yaml', help='Path to your yaml config file', default='config/config.yml')
+    parser.add_argument('-j', '--journal', help='Specify the journal key you want to process')
+    args = parser.parse_args()
+    with open(args.yaml, 'r') as stream:
         yml = yaml.safe_load(stream)
-    x = OJSnake(yml.get('solids'))
+    x = OJSnake(yml.get(args.journal))
     x.write_issues()
     x.write_volumes()
     x.write_articles()
