@@ -3,20 +3,23 @@ import json
 import yaml
 from csv import DictWriter
 from lxml import etree
+import lxml
 from tqdm import tqdm
 import base64
 import os
 from bs4 import BeautifulSoup as bs
+from pdf2image import convert_from_path
 
 
 class Article:
-    def __init__(self, article_data, oai_endpoint, identification, base_thumb=""):
+    def __init__(self, article_data, oai_endpoint, identification, base_thumb="", output_dir=""):
         self.namespaces = {
             "oai": "http://www.openarchives.org/OAI/2.0/",
             "oai_dc": "http://www.openarchives.org/OAI/2.0/oai_dc/",
             "dc": "http://purl.org/dc/elements/1.1/"
         }
         self.id = article_data.get("id")
+        self.output_dir = output_dir
         self.base_thumb = base_thumb
         self.parent = identification
         self.all_data = article_data
@@ -30,35 +33,59 @@ class Article:
         response = requests.get(
             f"{self.oai_endpoint}?verb=GetRecord&metadataPrefix=oai_dc&identifier=oai:{self.oai_endpoint.split('/')[2]}:article/{self.id}"
         )
-        return etree.fromstring(response.content)
+        try:
+            return etree.fromstring(response.content)
+        except lxml.etree.XMLSyntaxError:
+            return None
 
     def get_metadata(self):
-        title = self.tree.find(".//dc:title", namespaces=self.namespaces)
-        creator = self.tree.find(".//dc:creator", namespaces=self.namespaces)
-        date = self.tree.find(".//dc:date", namespaces=self.namespaces)
-        source = self.tree.find(".//dc:source", namespaces=self.namespaces)
-        try:
-            all_galleys = self.all_data['publications'][0]['galleys']
-            for galley in all_galleys:
-                r = requests.get(galley['urlPublished'])
-                if r.status_code == 200:
-                    published_galley = galley['urlPublished']
-                    break
-                else:
-                    print('Galley Not Published! Trying another.')
-        except:
-            print('No Galley Found!')
-            published_galley = None
+        title = None
+        creator = None
+        date = None
+        source = None
+        if self.tree:
+            title = self.tree.find(
+                ".//dc:title", namespaces=self.namespaces
+            )
+            creator = self.tree.find(
+                ".//dc:creator", namespaces=self.namespaces
+            )
+            date = self.tree.find(
+                ".//dc:date", namespaces=self.namespaces
+            )
+            source = self.tree.find(
+                ".//dc:source", namespaces=self.namespaces
+            )
+        # try:
+        all_galleys = self.all_data['publications'][0]['galleys']
+        for galley in all_galleys:
+            request_link = galley['urlPublished'], "application/pdf"
+            content_type = requests.get(galley['urlPublished']).headers.get('content-type')
+            if "application/pdf" not in content_type:
+                request_link = galley['file']['url'], content_type
+            r = requests.get(request_link[0])
+            if r.status_code == 200:
+                published_galley = request_link
+                break
+            else:
+                print(r.status_code)
+                print('Galley Not Published! Trying another.')
+        # except:
+        #     print('No Galley Found!')
+        #     published_galley = None
         if published_galley:
             original = published_galley
         else:
+            print('No Pdf :(')
+            # Should this go away?
             try:
-                original = self.all_data['publications'][0]['urlPublished']
+                original = self.all_data['publications'][0]['urlPublished'], "missing"
             except KeyError:
-                original = ""
+                original = "", ""
+        bundles = self.get_bundles(original)
         return {
-            "bundle:ORIGINAL": original,
-            "bundle:THUMBNAIL": self.get_thumbnail(original, self.base_thumb),
+            "bundle:ORIGINAL": bundles["original"],
+            "bundle:THUMBNAIL": bundles["thumbnail"],
             'dc.title': title.text if title is not None else "",
             'dc.creator': creator.text if creator is not None else "",
             'dc.date': date.text if date is not None else "",
@@ -67,6 +94,32 @@ class Article:
             'published': self.all_data.get('statusLabel', ''),
             "relation.isJournalIssueOfPublication": ""
         }
+
+    def get_bundles(self, current):
+        if current[1] == "application/pdf":
+            return {
+                "original": current[0],
+                "thumbnail": self.get_thumbnail(current[0], self.base_thumb),
+            }
+        else:
+            if not os.path.exists(self.output_dir):
+                os.makedirs(self.output_dir)
+            if not os.path.exists(f"{self.output_dir}/originals"):
+                os.makedirs(f"{self.output_dir}/originals")
+            if not os.path.exists(f"{self.output_dir}/thumbnails"):
+                os.makedirs(f"{self.output_dir}/thumbnails")
+            r = requests.get(current[0], stream=True)
+            original_filename = r.headers.get('content-disposition').split('attachment;filename="')[1].split('"')[0]
+            with open(f"{self.output_dir}/originals/{original_filename}", 'wb') as f:
+                for chunk in response.iter_content(chunk_size=8192):
+                    if chunk:  # filter out keep-alive chunks
+                        f.write(chunk)
+            images = convert_from_path(f'{current_dir}/originals/{original_filename}', first_page=1, last_page=1)
+            images[0].save(f'{current_dir}/thumbnails/{original_filename.replace("pdf", ".jpg")}', 'JPEG')
+            return {
+                'original': f"{self.output_dir}/originals/{original_filename}",
+                'thumbnail': f'{current_dir}/thumbnails/{original_filename.replace("pdf", ".jpg")}'
+            }
 
     @staticmethod
     def get_thumbnail(url, base=""):
@@ -116,7 +169,13 @@ class OJSnake:
         all_articles = self.get_articles_in_issue(issue_id)
         # Is status and statusLabel consistent across all OJS instances?
         print(f"Getting Articles from OJS for Issue {identification}.")
-        return [Article(article, self.oai_endpoint, identification, self.journal_config.get('default_thumbnail', '')) for article in tqdm(all_articles.get("articles", []))]
+        return [
+            Article(
+                article,
+                self.oai_endpoint, identification,
+                self.journal_config.get('default_thumbnail', ''),
+                self.journal_config.get("output_directory", "")
+            ) for article in tqdm(all_articles.get("articles", []))]
 
     def get_all_articles(self):
         all_issues = self.get_issues()
@@ -200,7 +259,7 @@ class OJSnake:
 if __name__ == "__main__":
     with open("config/config.yml", 'r') as stream:
         yml = yaml.safe_load(stream)
-    x = OJSnake(yml.get('paj'))
+    x = OJSnake(yml.get('solids'))
     x.write_issues()
     x.write_volumes()
     x.write_articles()
