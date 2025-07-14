@@ -1,0 +1,193 @@
+{
+    "_href": "https://paj-ojs-tamu.tdl.org/paj/api/v1/submissions/46",
+    "contextId": 1,
+    "currentPublicationId": 43,
+    "dateLastActivity": "2015-09-11 17:32:36",
+    "dateSubmitted": "2012-09-05 10:07:53",
+    "id": 46,
+    "lastModified": "2015-09-11 21:07:55",
+    "locale": "en",
+    "publications": [
+        {
+            "_href": "https://paj-ojs-tamu.tdl.org/paj/api/v1/submissions/46/publications/43",
+            "authorsString": "Lindsey Eckert",
+            "authorsStringIncludeInBrowse": "Lindsey Eckert",
+            "authorsStringShort": "Eckert",
+            "categoryIds": [],
+            "coverImage": {
+                "en": null
+            },
+            "datePublished": "2015-09-11",
+            "doiObject": null,
+            "fullTitle": {
+                "en": "Teaching with TypeWright: An English Class in the Computer Lab"
+            },
+            "galleys": [
+                {
+                    "doiObject": null,
+                    "file": {
+                        "_href": "https://paj-ojs-tamu.tdl.org/paj/api/v1/submissions/46/files/247",
+                        "assocId": 62,
+                        "assocType": 521,
+                        "caption": null,
+                        "copyrightOwner": null,
+                        "createdAt": "2015-09-11 20:40:16",
+                        "creator": {
+                            "en": ""
+                        },
+                        "credit": null,
+                        "dateCreated": null,
+                        "dependentFiles": [],
+                        "description": {
+                            "en": ""
+                        },
+                        "documentType": "pdf",
+                        "fileId": 255,
+                        "fileStage": 10,
+                        "genreId": 1,
+                        "genreIsDependent": false,
+                        "genreIsSupplementary": false,
+                        "genreName": {
+                            "en": "Article Text"
+                        },
+                        "id": 247,
+                        "language": null,
+                        "locale": "en",
+                        "mimetype": "application/pdf",
+                        "name": {
+                            "en": "m-farrington, Eckert.pdf"
+                        },
+                        "path": "journals/1/articles/46/submission/proof/46-1-247-1-10-20150911.pdf",
+                        "publisher": {
+                            "en": ""
+                        },
+                        "revisions": [],
+                        "source": {
+                            "en": ""
+                        },
+                        "sourceSubmissionFileId": null,
+                        "sponsor": {
+                            "en": ""
+                        },
+                        "subject": {
+                            "en": ""
+                        },
+                        "submissionId": 46,
+                        "terms": null,
+                        "updatedAt": "2015-09-11 20:40:16",
+                        "uploaderUserId": 631,
+                        "uploaderUserName": "m-farrington",
+                        "url": "https://paj-ojs-tamu.tdl.org/paj/$$$call$$$/api/file/file-api/download-file?submissionFileId=247&submissionId=46&stageId=5",
+                        "viewable": false
+                    },
+                    "id": 62,
+                    "isApproved": true,
+                    "label": "Remote",
+                    "locale": "en",
+                    "pub-id::publisher-id": null,
+                    "publicationId": 43,
+                    "seq": 0,
+                    "submissionFileId": 247,
+                    "urlPublished": "https://paj-ojs-tamu.tdl.org/paj/article/view/46/version/43/62",
+                    "urlRemote": "RemoteURL"
+                },
+                {
+                    "doiObject": null,
+                    "file": {
+                        "_href": "https://paj-ojs-tamu.tdl.org/paj/api/v1/submissions/46/files/248",
+                        "assocId": 63,
+                        "assocType": 521,
+                        "caption": null,
+                        "copyrightOwner": null,
+                        "createdAt": "2015-09-11 20:40:27",
+                        "creator": {
+                            "en": ""
+                        },
+                        "credit": null,
+                        "dateCreated": null,
+                        "dependentFiles": [],
+                        "description": {
+                            "en": ""
+                        },
+                        "documentType": "pdf",
+                        "fileId": 256,
+                        "fileStage": 10,
+                        "genreId": 1,
+                        "genreIsDependent": false,
+                        "genreIsSupplementary": false,
+                        "genreName": {
+                            "en": "Article Text"
+                        },
+                        "id": 248,
+                        "language": null,
+                        "locale": "en",
+                        "mimetype": "application/pdf",
+                        "name": {
+                            "en": "m-farrington, Eckert.pdf"
+                        },
+                        "path": "journals/1/articles/46/submission/proof/46-1-248-1-10-20150911.pdf",
+                        "publisher": {
+                            "en": ""
+                        },
+                        "revisions": [],
+                        "source": {
+                            "en": ""
+                        },
+                        "sourceSubmissionFileId": null,
+                        "sponsor": {
+                            "en": ""
+                        },
+                        "subject": {
+                            "en": ""
+                        },
+                        "submissionId": 46,
+                        "terms": null,
+                        "updatedAt": "2015-09-11 20:40:27",
+                        "uploaderUserId": 631,
+                        "uploaderUserName": "m-farrington",
+                        "url": "https://paj-ojs-tamu.tdl.org/paj/$$$call$$$/api/file/file-api/download-file?submissionFileId=248&submissionId=46&stageId=5",
+                        "viewable": false
+                    },
+                    "id": 63,
+                    "isApproved": true,
+                    "label": "PDF",
+                    "locale": "en",
+                    "pub-id::publisher-id": null,
+                    "publicationId": 43,
+                    "seq": 1,
+                    "submissionFileId": 248,
+                    "urlPublished": "https://paj-ojs-tamu.tdl.org/paj/article/view/46/version/43/63",
+                    "urlRemote": null
+                }
+            ],
+            "id": 43,
+            "locale": "en",
+            "pages": "",
+            "prefix": {
+                "en": ""
+            },
+            "primaryContactId": 61,
+            "pub-id::publisher-id": null,
+            "sectionId": 1,
+            "status": 3,
+            "submissionId": 46,
+            "subtitle": {
+                "en": ""
+            },
+            "title": {
+                "en": "Teaching with TypeWright: An English Class in the Computer Lab"
+            },
+            "urlPublished": "https://paj-ojs-tamu.tdl.org/paj/article/view/46/version/43",
+            "version": 1
+        }
+    ],
+    "stageId": 4,
+    "status": 3,
+    "statusLabel": "Published",
+    "submissionProgress": "",
+    "urlAuthorWorkflow": "https://paj-ojs-tamu.tdl.org/paj/authorDashboard/submission/46",
+    "urlEditorialWorkflow": "https://paj-ojs-tamu.tdl.org/paj/workflow/access/46",
+    "urlPublished": "https://paj-ojs-tamu.tdl.org/paj/article/view/46",
+    "urlSubmissionWizard": "https://paj-ojs-tamu.tdl.org/paj/submission?id=46",
+    "urlWorkflow": "https://paj-ojs-tamu.tdl.org/paj/workflow/access/46"
+}
