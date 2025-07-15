@@ -7,7 +7,6 @@ from tqdm import tqdm
 import base64
 import os
 from bs4 import BeautifulSoup as bs
-from pdf2image import convert_from_path
 import argparse
 import json
 
@@ -27,7 +26,6 @@ class Article:
         self.title = article_data["publications"][0]["fullTitle"]
         self.authors = article_data["publications"][0].get("authorsString")
         self.oai_endpoint = oai_endpoint
-        self.tree = self.fetch_metadata()
         self.for_csv = self.get_metadata()
 
     def fetch_metadata(self):
@@ -44,22 +42,30 @@ class Article:
         creator = None
         date = None
         source = None
-        if self.tree is not None:
-            title = self.tree.find(
+        tree = self.fetch_metadata()
+        if tree is not None:
+            title = tree.find(
                 ".//dc:title", namespaces=self.namespaces
             )
-            creator = self.tree.find(
+            all_creators = []
+            creators = tree.findall(
                 ".//dc:creator", namespaces=self.namespaces
             )
-            date = self.tree.find(
+            if creators is not None:
+                for creator in creators:
+                    all_creators.append(creator.text)
+            date = tree.find(
                 ".//dc:date", namespaces=self.namespaces
             )
-            source = self.tree.find(
+            source = tree.find(
                 ".//dc:source", namespaces=self.namespaces
             )
-            subjects = self.tree.find(
-                ".//dc:subject", namespaces=self.namespaces
-            )
+            all_subjects = []
+            subjects = tree.findall(".//dc:subject", namespaces=self.namespaces)
+            if subjects:
+                for subject in subjects:
+                    all_subjects.append(subject.text)
+
 
         all_galleys = self.all_data['publications'][0]['galleys']
         final_galley = None
@@ -90,9 +96,10 @@ class Article:
             "bundle:ORIGINAL": bundles["original"],
             "bundle:THUMBNAIL": bundles["thumbnail"],
             'dc.title': title.text if title is not None else "",
-            'dc.creator': creator.text if creator is not None else "",
+            'dc.creator': "||".join(all_creators),
             'dc.date': date.text if date is not None else "",
             'dc.source': source.text if source is not None else "",
+            'dc.subject': "||".join(all_subjects),
             "dspace.entity.type": "Publication",
             'published': self.all_data.get('statusLabel', ''),
             "relation.isJournalIssueOfPublication": ""
