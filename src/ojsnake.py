@@ -130,28 +130,9 @@ class Article:
             }
             
         else:
-            if not os.path.exists(self.output_dir):
-                os.makedirs(self.output_dir)
-            if not os.path.exists(f"{self.output_dir}/originals"):
-                os.makedirs(f"{self.output_dir}/originals")
-            if not os.path.exists(f"{self.output_dir}/thumbnails"):
-                os.makedirs(f"{self.output_dir}/thumbnails")
-            r = requests.get(current[0], stream=True)
-            try:
-                original_filename = r.headers.get('content-disposition').split('attachment;filename="')[1].split('"')[0]
-            except AttributeError:
-                print(r.headers)
-                print(current)
-                original_filename = "unknown.pdf"
-            with open(f"{self.output_dir}/originals/{original_filename}", 'wb') as f:
-                for chunk in r.iter_content(chunk_size=8192):
-                    if chunk:  # filter out keep-alive chunks
-                        f.write(chunk)
-            images = convert_from_path(f'{self.output_dir}/originals/{original_filename}', first_page=1, last_page=1)
-            images[0].save(f'{self.output_dir}/thumbnails/{original_filename.replace("pdf", ".jpg")}', 'JPEG')
             return {
-                'original': f"{self.output_dir}/originals/{original_filename}",
-                'thumbnail': f'{self.output_dir}/thumbnails/{original_filename.replace("pdf", ".jpg")}'
+                "original": "Missing",
+                "thumbnail": "Missing"
             }
 
     @staticmethod
