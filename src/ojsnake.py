@@ -42,6 +42,8 @@ class Article:
         creator = None
         date = None
         source = None
+        all_creators = None
+        all_subjects = None
         tree = self.fetch_metadata()
         if tree is not None:
             title = tree.find(
@@ -66,9 +68,9 @@ class Article:
                 for subject in subjects:
                     all_subjects.append(subject.text)
 
-
         all_galleys = self.all_data['publications'][0]['galleys']
         final_galley = None
+        published_galley = None
         for galley in all_galleys:
             request_link = galley['urlPublished'], "application/pdf"
             content_type = requests.get(galley['urlPublished']).headers.get('content-type')
@@ -96,10 +98,10 @@ class Article:
             "bundle:ORIGINAL": bundles["original"],
             "bundle:THUMBNAIL": bundles["thumbnail"],
             'dc.title': title.text if title is not None else "",
-            'dc.creator': "||".join(all_creators),
+            'dc.creator': "||".join(all_creators) if all_creators is not None else "",
             'dc.date': date.text if date is not None else "",
             'dc.source': source.text if source is not None else "",
-            'dc.subject': "||".join(all_subjects),
+            'dc.subject': "||".join(all_subjects) if all_subjects is not None else "",
             "dspace.entity.type": "Publication",
             'published': self.all_data.get('statusLabel', ''),
             "relation.isJournalIssueOfPublication": ""
