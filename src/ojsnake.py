@@ -9,6 +9,7 @@ import os
 from bs4 import BeautifulSoup as bs
 import argparse
 import json
+from pprint import pprint
 
 
 class Article:
@@ -253,6 +254,14 @@ class OJSnake:
     def get_articles_in_issue(self, issue_id):
         r = requests.get(f"{self.url}/api/v1/issues/{issue_id}", headers=self.headers)
         return r.json()
+    
+    def get_sushi_endpoint(self):
+        r = requests.get(f"{self.url}/api/v1/stats/sushi/reports/pr?customer_id=0&begin_date=2024-05-01&end_date=2025-01-01", headers=self.headers)
+        return r.json()
+    
+    def get_contexts(self):
+        r = requests.get(f"{self.url}/api/v1/institutions", headers=self.headers)
+        return r.json()
 
     def get_title_data(self):
         return {
@@ -275,8 +284,26 @@ class OJSnake:
     def get_reviewers(self):
         r = requests.get(f"{self.url}/api/v1/users/reviewers", headers=self.headers)
         return r.json()
+    
+    def get_all_editors(self):
+        initial = requests.get(f"{self.url}/api/v1/users?roleIds=16&count=100", headers=self.headers).json()
+        total_matches = initial['itemsMax']
+        if total_matches < 100:
+            people = []
+            for person in initial['items']:
+                new_guy = {
+                    "name": person["fullName"],
+                    "email": person["email"],
+                    "roles": "|".join([group['name']['en'] for group in person['groups']]) 
+                }
+                people.append(new_guy)
+            return people
+        else:
+            return "Too many"
+
 
 if __name__ == "__main__":
+    from pprint import pprint
     parser = argparse.ArgumentParser()
     parser.add_argument('-y', '--yaml', help='Path to your yaml config file', default='config/config.yml')
     parser.add_argument('-j', '--journal', help='Specify the journal key you want to process')
@@ -284,7 +311,12 @@ if __name__ == "__main__":
     with open(args.yaml, 'r') as stream:
         yml = yaml.safe_load(stream)
     x = OJSnake(yml.get(args.journal))
-    x.write_issues()
-    x.write_volumes()
-    x.write_articles()
-    x.write_title_data()
+    json_data = x.get_all_editors()
+    pprint(json_data)
+    # with open("michael.json", 'w') as my_json:
+    #     json.dump(json_data, my_json, indent=4)
+    # print(x.get_contexts())
+    # x.write_issues()
+    # x.write_volumes()
+    # x.write_articles()
+    # x.write_title_data()
