@@ -299,6 +299,7 @@ class OJSnake:
                 people.append(new_guy)
             return people
         else:
+            print("Too many")
             return "Too many"
 
 
@@ -311,8 +312,13 @@ if __name__ == "__main__":
     with open(args.yaml, 'r') as stream:
         yml = yaml.safe_load(stream)
     x = OJSnake(yml.get(args.journal))
-    json_data = x.get_all_editors()
-    pprint(json_data)
+    editors = x.get_all_editors()
+    ignore = ("ojsadmin", "TDL Admin", "Mark Baggett", "Corina Barr")
+    for editor in editors:
+        if editor['name'] not in ignore:
+            print(f"{editor['name']} | {editor["email"]}")
+    # json_data = x.get_all_editors()
+    # pprint(json_data)
     # with open("michael.json", 'w') as my_json:
     #     json.dump(json_data, my_json, indent=4)
     # print(x.get_contexts())
